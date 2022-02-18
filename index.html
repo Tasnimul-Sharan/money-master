@@ -5,17 +5,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Save money</title>
 </head>
 
 <body>
-    <header class="container mb-5">
-        <h1>Money Cost</h1>
+    <header class="container">
+        <h1 class="text-center bg-dark text-white">Money Cost</h1>
     </header>
     <main>
-        <section class="container">
+        <section class="container bg-info mb-5">
             <div class="row">
                 <div class="col-lg-6">
                     <div class="row">
@@ -27,20 +28,21 @@
                 <div class="col-lg-6">
                     <div class="row">
                         <div class="col">
-                            <h5>income</h5>
+                            <h5 class="ms-5">income</h5>
                             <p>income: <input id="income-field" type="text"></p>
-                            <h5>Expenses</h5>
+                            <h5 class="ms-5">Expenses</h5>
                             <p>food: <input id="food-field" type="text"></p>
                             <p>Rent: <input id="rent-field" type="text"></p>
-                            <p>Clothes: <input id="Cloth-field" type="text"></p>
+                            <p>Clothes:<input id="Cloth-field" type="text"></p>
                             <button id="Calculate-btn" class=" btn btn-primary px-4">Calculate</button>
                             <h5>Total Expenses: <span id="Total-Expenses">00</span></h5>
                             <h5>Balance: <span id="total-balance">00</span></h5>
                         </div>
                     </div>
                 </div>
-                <div class="error-message">
-                    <p id="notify-fail" class="notify">❌ Pin Didn't Match, Please try again</p>
+                <div>
+                    <p id="error-message" class="error">you can't use string accept number</p>
+                    <p id="negative-error" class="error">you can't use negative number</p>
                 </div>
             </div>
         </section>
